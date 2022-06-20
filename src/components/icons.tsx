@@ -54,6 +54,10 @@ export const MoreVerticalIcon = (style: ImageStyle): IconElement => (
   <Icon {...style} name='more-vertical'/>
 );
 
+export const PersonOutlineIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='person-outline'/>
+);
+
 export const SearchIcon = (style: ImageStyle): IconElement => (
   <Icon {...style} name='search'/>
 );

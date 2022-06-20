@@ -10,7 +10,7 @@ import {
   Text,
   IndexPath,
 } from '@ui-kitten/components';
-import { BookIcon, GithubIcon } from '../../components/icons';
+import { BookIcon, SettingsIcon, MenuIcon, PersonOutlineIcon } from '../../components/icons';
 import { SafeAreaLayout } from '../../components/safe-area-layout.component';
 import { WebBrowserService } from '../../services/web-browser.service';
 import { AppInfoService } from '../../services/app-info.service';
@@ -22,11 +22,27 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
 
   const DATA = [
     {
-      title: 'Libraries',
-      icon: GithubIcon,
+      title: 'Home',
+      icon: MenuIcon,
+      onPress: () => {
+        navigation.toggleDrawer();
+        navigation.navigate('Home');
+      },
+    },
+    {
+      title: 'Movements',
+      icon: PersonOutlineIcon,
       onPress: () => {
         navigation.toggleDrawer();
         navigation.navigate('Libraries');
+      },
+    },
+    {
+      title: 'Settings',
+      icon: SettingsIcon,
+      onPress: () => {
+        navigation.toggleDrawer();
+        navigation.navigate('Settings');
       },
     },
     {
@@ -45,10 +61,10 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
         <View style={styles.profileContainer}>
           <Avatar
             size='giant'
-            source={require('../../assets/images/image-app-icon.png')}
+            source={require('../../assets/images/HaySetGo-logos_black.png')}
           />
           <Text style={styles.profileName} category='h6'>
-            Kitten Tricks
+            HaySetGo
           </Text>
         </View>
       </Layout>

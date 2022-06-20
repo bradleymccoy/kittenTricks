@@ -1,7 +1,10 @@
 {
+  "name": "HaySetGo",
+  "slug": "hay-set-go",
+  "displayName": "HaySetGo",
   "expo": {
-    "name": "Kitten Tricks",
-    "slug": "kitten-tricks",
+    "name": "HaySetGo",
+    "slug": "hay-set-go",
     "version": "2.4.0",
     "description": "UI Kitten Demo Application",
     "githubUrl": "https://github.com/akveo/kittenTricks",
@@ -23,9 +26,9 @@
     ],
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "icon": "./src/assets/images/image-app-icon.png",
+    "icon": "./src/assets/images/HaySetGo-logos.jpeg",
     "splash": {
-      "image": "src/assets/images/image-splash.png",
+      "image": "src/assets/images/HaySetGo-logos.jpeg",
       "resizeMode": "contain"
     },
     "assetBundlePatterns": [

@@ -33,16 +33,6 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Social',
-    route: 'Social',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetSocialIcon, dark: AssetSocialDarkIcon },
-      );
-    },
-  },
-  {
     title: 'Articles',
     route: 'Articles',
     icon: (style: ImageStyle) => {
@@ -63,7 +53,7 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Dashboards',
+    title: 'Workouts',
     route: 'Dashboards',
     icon: (style: ImageStyle) => {
       return React.createElement(
@@ -79,6 +69,16 @@ export const data: LayoutData[] = [
       return React.createElement(
         ThemedIcon,
         { ...style, light: AssetEcommerceIcon, dark: AssetEcommerceDarkIcon },
+      );
+    },
+  },
+  {
+    title: 'Movements',
+    route: 'Libraries',
+    icon: (style: ImageStyle) => {
+      return React.createElement(
+        ThemedIcon,
+        { ...style, light: AssetSocialIcon, dark: AssetSocialDarkIcon },
       );
     },
   },

@@ -2,6 +2,12 @@ import { Library } from './type';
 
 export const data: Library[] = [
   {
+    title: 'Thruster',
+    description: 'With the bar in a front rack position squat below parallel then at the top of the squat go directly into a push press',
+    link: 'https://youtu.be/L219ltL15zk',
+
+  },
+  {
     title: 'React Native',
     description: 'A framework for building native apps with React',
     link: 'https://github.com/facebook/react-native',

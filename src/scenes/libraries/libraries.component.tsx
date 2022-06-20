@@ -66,7 +66,7 @@ export const LibrariesScreen = ({ navigation }): React.ReactElement => {
       style={styles.safeArea}
       insets='top'>
       <TopNavigation
-        title='Libraries'
+        title='Movements Test'
         accessoryLeft={renderBackAction}
       />
       <List

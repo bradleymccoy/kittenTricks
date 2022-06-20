@@ -52,7 +52,7 @@ export const HomeBottomNavigation: React.FC<BottomTabBarProps> = ({ navigation, 
         selectedIndex={state.index}
         onSelect={onSelect}>
         <BottomNavigationTab
-          title='Layouts'
+          title='Test'
           icon={LayoutIcon}
         />
         <BottomNavigationTab
