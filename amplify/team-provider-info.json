@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-haysetgo-staging-154002-authRole",
+      "UnauthRoleArn": "arn:aws:iam::282167660161:role/amplify-haysetgo-staging-154002-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::282167660161:role/amplify-haysetgo-staging-154002-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-haysetgo-staging-154002-deployment",
+      "UnauthRoleName": "amplify-haysetgo-staging-154002-unauthRole",
+      "StackName": "amplify-haysetgo-staging-154002",
+      "StackId": "arn:aws:cloudformation:us-east-2:282167660161:stack/amplify-haysetgo-staging-154002/956fc950-f241-11ec-893b-0a92e1a0f9f4",
+      "AmplifyAppId": "d224fvjdknyq8q"
+    },
+    "categories": {
+      "auth": {
+        "HaySetGo": {}
+      }
+    }
+  }
+}

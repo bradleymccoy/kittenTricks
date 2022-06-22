@@ -52,15 +52,7 @@ export default ({ navigation }): React.ReactElement => {
     <KeyboardAvoidingView style={styles.container}>
       <ImageOverlay
         style={styles.headerContainer}
-        source={require('./assets/image-background.jpg')}>
-        <Button
-          style={styles.evaButton}
-          appearance='ghost'
-          status='control'
-          size='large'
-          accessoryLeft={HeartIconFill}>
-          EVA
-        </Button>
+        source={require('./assets/sign-up-background.jpg')}>
         <View style={styles.signUpContainer}>
           <Text style={styles.signInLabel} category='h4' status='control'>
             SIGN UP

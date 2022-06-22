@@ -22,7 +22,7 @@ export default ({ navigation }): React.ReactElement => {
     <KeyboardAvoidingView>
       <ImageOverlay
         style={styles.container}
-        source={require('./assets/image-background.jpg')}>
+        source={require('./assets/sign-in-background.jpg')}>
         <View style={styles.signInContainer}>
           <Text
             style={styles.signInLabel}
