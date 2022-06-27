@@ -1,3 +1,15 @@
+//import { withAuthenticator, SignIn } from 'aws-amplify-react-native';
+import { withAuthenticator } from 'aws-amplify-react-native';
+import { Amplify } from 'aws-amplify';
+import awsmobile from './src/aws-exports';
 import App from './src/app/app.component';
 
-export default App;
+Amplify.configure({
+  ...awsmobile,
+  Analytics: {
+    disabled: true
+  }
+});
+
+export default withAuthenticator(App);
+//export default App;

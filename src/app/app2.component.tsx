@@ -53,7 +53,7 @@ const App: React.FC<{ mapping: Mapping, theme: Theme }> = ({ mapping, theme }) =
 const Splash = ({ loading }): React.ReactElement => (
   <SplashImage
     loading={loading}
-    source={require('../assets/images/Hayden App Phase One-32.jpg')}
+    source={require('../assets/images/image-splash.png')}
   />
 );
 

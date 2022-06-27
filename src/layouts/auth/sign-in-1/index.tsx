@@ -4,7 +4,8 @@ import { Button, Input, Text } from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
 import { ArrowForwardIcon, FacebookIcon, GoogleIcon, TwitterIcon } from './extra/icons';
 import { KeyboardAvoidingView } from './extra/3rd-party';
-
+import { ForgotPasswordScreen } from '../../../scenes/forgotpassword/forgot-password.component'
+ 
 export default ({ navigation }): React.ReactElement => {
 
   const [email, setEmail] = React.useState<string>();
@@ -17,6 +18,10 @@ export default ({ navigation }): React.ReactElement => {
   const onSignUpButtonPress = (): void => {
     navigation && navigation.navigate('SignUp1');
   };
+
+  const onForgotPasswordPress = (): void => {
+    navigation && navigation.navigate('ForgotPassword');
+  }
 
   return (
     <KeyboardAvoidingView>
@@ -65,34 +70,15 @@ export default ({ navigation }): React.ReactElement => {
           SIGN IN
         </Button>
         <View style={styles.socialAuthContainer}>
-          <Text
+          <Button
             style={styles.socialAuthHintText}
-            status='control'>
-            Sign with a social account
-          </Text>
-          <View style={styles.socialAuthButtonsContainer}>
-            <Button
-              appearance='ghost'
-              size='giant'
-              status='control'
-              accessoryLeft={GoogleIcon}
-            />
-            <Button
-              appearance='ghost'
-              size='giant'
-              status='control'
-              accessoryLeft={FacebookIcon}
-            />
-            <Button
-              appearance='ghost'
-              size='giant'
-              status='control'
-              accessoryLeft={TwitterIcon}
-            />
-          </View>
+            status='control'
+            onPress={onForgotPasswordPress}>
+            Forgot Password
+          </Button>
         </View>
       </ImageOverlay>
-    </KeyboardAvoidingView>
+    </KeyboardAvoidingView >
   );
 };
 

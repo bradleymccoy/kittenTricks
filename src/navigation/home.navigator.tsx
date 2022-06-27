@@ -11,7 +11,7 @@ import { ThemesNavigator } from './themes.navigator';
 import { HomeBottomNavigation } from '../scenes/home/home-bottom-navigation.component';
 import { HomeDrawer } from '../scenes/home/home-drawer.component';
 import { LibrariesScreen } from '../scenes/libraries/libraries.component';
-import { SettingsScreen } from '../scenes/settings/settings.component'
+import { SettingsScreen } from '../scenes/settings/settings.component';
 
 const BottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
