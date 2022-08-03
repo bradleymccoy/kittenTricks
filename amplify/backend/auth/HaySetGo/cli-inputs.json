@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "hayset22c13dae",
+    "resourceNameTruncated": "hayset219db849",
     "userPoolName": "HaySetGo",
     "autoVerifiedAttributes": [
       "email"
@@ -21,7 +21,6 @@
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
       "name",
-      "family_name",
       "email",
       "birthdate"
     ],
@@ -30,9 +29,9 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "HaySet22c13dae_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "HaySet219db849_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "22c13dae",
+    "sharedId": "219db849",
     "resourceName": "HaySetGo",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",

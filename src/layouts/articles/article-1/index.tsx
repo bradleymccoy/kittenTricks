@@ -1,100 +1,80 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Avatar, Button, Divider, Layout, Text } from '@ui-kitten/components';
+// import { Avatar, Button, Divider, Layout, Text } from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
 import { HeartIcon, MessageCircleIcon } from './extra/icons';
 import { Article } from './extra/data';
+import React, { Component, useState } from "react";
+import { Text, StyleSheet, ScrollView, View } from "react-native";
+import { Amplify } from 'aws-amplify';
+import { awsmobile } from '../../../aws-exports';
+import { LIST_WORKOUTS } from '../../../graphql/queries';
+import { API, graphqlOperation } from 'aws-amplify';
 
-const data: Article = Article.howToEatHealthy();
+Amplify.configure({
+  ...awsmobile,
+  Analytics: {
+    disabled: true
+  }
+});
 
-export default (): React.ReactElement => (
-  <Layout style={styles.container}>
-    <ImageOverlay
-      style={styles.headerContainer}
-      source={data.image}>
-      <Text
-        style={styles.headerTitle}
-        category='h1'
-        status='control'>
-        {data.title}
+
+
+// await DataStore.start();
+class Workouts extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+    };
+  };
+  
+  
+
+onQuery = async () => {
+  const data = await API.graphql(graphqlOperation(LIST_WORKOUTS));
+  const data1 = data.data.listWorkoutData.items
+  console.log('API.GraphQL query: ', data1)
+  console.log('posts state: ', data1[1].name)
+};
+
+
+render() {
+  return (
+    <ScrollView
+      style={styles.scrollview}
+      contentContainerStyle={styles.container}
+    >
+      <Text style={styles.text} onPress={this.onQuery}>
+        Query Posts
       </Text>
-      <Text
-        style={styles.headerDescription}
-        category='s1'
-        status='control'>
-        {data.description}
-      </Text>
-    </ImageOverlay>
-    <Layout
-      style={styles.contentContainer}
-      level='1'>
       <Text>
-        {data.content}
+      {this.state.posts.map((data1, i) => (
+        <Text key={i}>{`${data1.name} ${data1.description}`}</Text>
+      ))}
+      {this.state.posts}
       </Text>
-    </Layout>
-    <Divider/>
-    <View style={styles.activityContainer}>
-      <Avatar source={data.author.photo}/>
-      <View style={styles.authoringInfoContainer}>
-        <Text>
-          {data.author.fullName}
-        </Text>
-        <Text
-          appearance='hint'
-          category='p2'>
-          {data.date}
-        </Text>
-      </View>
-      <Button
-        style={styles.iconButton}
-        appearance='ghost'
-        status='basic'
-        accessoryLeft={MessageCircleIcon}>
-        {`${data.comments.length}`}
-      </Button>
-      <Button
-        style={styles.iconButton}
-        appearance='ghost'
-        status='danger'
-        accessoryLeft={HeartIcon}>
-        {`${data.likes.length}`}
-      </Button>
-    </View>
-  </Layout>
-);
+      <Text>
+        
+      </Text>
+    </ScrollView>
+  );
+}
+}
+
+export default Workouts;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  headerContainer: {
-    alignItems: 'center',
-    minHeight: 256,
-    paddingVertical: 24,
-  },
-  headerTitle: {
-    textAlign: 'center',
-    marginVertical: 24,
-    zIndex: 1,
-  },
-  headerDescription: {
-    zIndex: 1,
-  },
-  contentContainer: {
-    flex: 1,
-    padding: 24,
-  },
-  activityContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 16,
-  },
-  authoringInfoContainer: {
-    flex: 1,
-    marginHorizontal: 16,
-  },
-  iconButton: {
-    paddingHorizontal: 0,
-  },
+scrollview: {
+  paddingTop: 40,
+  flex: 1,
+},
+container: {
+  alignItems: "center",
+},
+text: {
+  fontSize: 20,
+  textAlign: "center",
+  margin: 10,
+},
 });
+
 

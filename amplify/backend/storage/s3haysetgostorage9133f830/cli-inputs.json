@@ -1,0 +1,10 @@
+{
+  "resourceName": "s3haysetgostorage9133f830",
+  "bucketName": "haysetgo-storage-9133f830",
+  "policyUUID": "6e3b41de",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ"
+  ]
+}

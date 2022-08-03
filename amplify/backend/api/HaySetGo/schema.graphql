@@ -1,0 +1,32 @@
+type Post @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  author: String
+  image: String
+  data: String
+  Blogs: [Blog] @manyToMany(relationName: "PostBlog")
+}
+
+type Blog @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  author: String
+  image: AWSURL
+  shortDescription: String
+  posts: [Post] @manyToMany(relationName: "PostBlog")
+}
+
+type WorkoutGroups @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  group: String
+  WorkoutData: [WorkoutData] @hasMany(indexName: "byWorkoutGroups", fields: ["id"])
+}
+
+type WorkoutData @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String!
+  group: String!
+  workoutgroupsID: ID! @index(name: "byWorkoutGroups")
+}
+ 

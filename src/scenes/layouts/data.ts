@@ -23,16 +23,6 @@ export interface LayoutData extends MenuItem {
 
 export const data: LayoutData[] = [
   {
-    title: 'Auth',
-    route: 'Auth',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetAuthIcon, dark: AssetAuthDarkIcon },
-      );
-    },
-  },
-  {
     title: 'Articles',
     route: 'Articles',
     icon: (style: ImageStyle) => {
@@ -43,32 +33,12 @@ export const data: LayoutData[] = [
     },
   },
   {
-    title: 'Messaging',
-    route: 'Messaging',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetMessagingIcon, dark: AssetMessagingDarkIcon },
-      );
-    },
-  },
-  {
     title: 'Workouts',
     route: 'Dashboards',
     icon: (style: ImageStyle) => {
       return React.createElement(
         ThemedIcon,
         { ...style, light: AssetDashboardsIcon, dark: AssetDashboardsDarkIcon },
-      );
-    },
-  },
-  {
-    title: 'Ecommerce',
-    route: 'Ecommerce',
-    icon: (style: ImageStyle) => {
-      return React.createElement(
-        ThemedIcon,
-        { ...style, light: AssetEcommerceIcon, dark: AssetEcommerceDarkIcon },
       );
     },
   },

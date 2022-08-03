@@ -24,13 +24,7 @@ const ArticlesMenuNavigator = (): React.ReactElement => (
 
 export const ArticlesNavigator = (): React.ReactElement => (
   <Stack.Navigator headerMode='none'>
-    <Stack.Screen name='Articles' component={ArticlesMenuNavigator}/>
-    <Stack.Screen name='Article1' component={Article1Screen}/>
-    <Stack.Screen name='Article2' component={Article2Screen}/>
-    <Stack.Screen name='Article3' component={Article3Screen}/>
     <Stack.Screen name='ArticleList1' component={ArticleList1Screen}/>
-    <Stack.Screen name='ArticleList2' component={ArticleList2Screen}/>
-    <Stack.Screen name='ArticleList3' component={ArticleList3Screen}/>
-    <Stack.Screen name='ArticleList4' component={ArticleList4Screen}/>
+    <Stack.Screen name='Article1' component={Article1Screen}/>
   </Stack.Navigator>
 );

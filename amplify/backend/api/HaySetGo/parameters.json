@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "HaySetGo",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-07-06T12:58:57.680Z"
+}
